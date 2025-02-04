@@ -204,3 +204,33 @@ footer {
     margin-top: 10px;
     display: none;
 }
+
+.scratch-frame {
+  position: relative;
+  display: inline-block;
+  width: 200px;
+  height: auto;
+  overflow: hidden;
+}
+
+.scratch-frame img {
+  display: block;
+  width: 100%;
+}
+
+.scratch-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ccc; /* Couleur grise */
+  z-index: 2;
+  cursor: crosshair;
+  transition: opacity 0.3s ease;
+}
+
+.scratch-frame .scratched {
+  opacity: 0 !important;
+}
+
