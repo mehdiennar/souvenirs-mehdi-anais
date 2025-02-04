@@ -85,6 +85,55 @@
             <img src="example15.jpg" alt="Souvenir 15" />
             <p>Nos sorties sur la corniche 🌄</p>
         </div>
+        <div class="photo-frame" onclick="openFullscreen('example16.jpg', 'L’anniversaire de ma star qui a fêté ses 18 ans 🎂✨')">
+    <img src="example16.jpg" alt="Souvenir 16" />
+    <p>L’anniversaire de ma star qui a fêté ses 18 ans 🎂✨</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example17.jpg', 'Ma femme avec ma fille ❤️👩‍👧')">
+    <img src="example17.jpg" alt="Souvenir 17" />
+    <p>Ma femme avec ma fille ❤️👩‍👧</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example18.jpg', 'T’aimes bien la pose ? 😎')">
+    <img src="example18.jpg" alt="Souvenir 18" />
+    <p>T’aimes bien la pose ? 😎</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example19.jpg', 'Nani qui a validé son baptême de plongée 🌊🤿')">
+    <img src="example19.jpg" alt="Souvenir 19" />
+    <p>Nani qui a validé son baptême de plongée 🌊🤿</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example20.jpg', 'Eyes contact 👀✨')">
+    <img src="example20.jpg" alt="Souvenir 20" />
+    <p>Eyes contact 👀✨</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example21.jpg', 'Vamos Portugal !!! 🇵🇹⚽')">
+    <img src="example21.jpg" alt="Souvenir 21" />
+    <p>Vamos Portugal !!! 🇵🇹⚽</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example22.jpg', 'Mamma mia la Cucina Italiana 🍝🇮🇹')">
+    <img src="example22.jpg" alt="Souvenir 22" />
+    <p>Mamma mia la Cucina Italiana 🍝🇮🇹</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example23.jpg', 'Le musée de Monaco 🏛️🇲🇨')">
+    <img src="example23.jpg" alt="Souvenir 23" />
+    <p>Le musée de Monaco 🏛️🇲🇨</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example24.jpg', 'Notre premier marché de Noël 🎄☃️')">
+    <img src="example24.jpg" alt="Souvenir 24" />
+    <p>Notre premier marché de Noël 🎄☃️</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example25.jpg', 'Couché de soleil sur la Prom 🌅')">
+    <img src="example25.jpg" alt="Souvenir 25" />
+    <p>Couché de soleil sur la Prom 🌅</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example26.jpg', 'Burrito mexicano 🌯🇲🇽')">
+    <img src="example26.jpg" alt="Souvenir 26" />
+    <p>Burrito mexicano 🌯🇲🇽</p>
+</div>
+<div class="photo-frame" onclick="openFullscreen('example27.jpg', 'Le premier resto tunisien “Trop piquant” ! 🌶️🇹🇳')">
+    <img src="example27.jpg" alt="Souvenir 27" />
+    <p>Le premier resto tunisien “Trop piquant” ! 🌶️🇹🇳</p>
+</div>
+
     </div>
     <footer>
         <p>Avec amour, Mehdi & Anaïs ❤️</p>
@@ -93,22 +142,35 @@
     <script>
         // Tableau contenant les descriptions des photos
         const photoDescriptions = [
-          "Notre premier match ensemble 💕",
-          "Petit pique-nique sur la prom' 🌞",
-          "La classe ✨",
-          "Petit train mais toujours beaux 🚆",
-          "Jsp sah 🤷‍♂️",
-          "Toujours beaux et drôles 😂",
-          "Les beaux sourires sous les étoiles 🌌",
-          "Une soirée avec Vaiana 🌺",
-          "La vue de chez Nonna 🌊",
-          "Le brunch amazing de Rosewood 🌹🍽️",
-          "Un cinéma magnifique ✨",
-          "Notre première poutine 🌅",
-          "Notre premier resto en Italie pour l'anniversaire 🌸🍴",
-          "Nos baignades à la plage de Villefranche 🌊🥰",
-          "Nos sorties sur la corniche 🌄",
-        ];
+    "Notre premier match ensemble 💕",
+    "Petit pique-nique sur la prom' 🌞",
+    "La classe ✨",
+    "Petit train mais toujours beaux 🚆",
+    "Jsp sah 🤷‍♂️",
+    "Toujours beaux et drôles 😂",
+    "Les beaux sourires sous les étoiles 🌌",
+    "Une soirée avec Vaiana 🌺",
+    "La vue de chez Nonna 🌊",
+    "Le brunch amazing de Rosewood 🌹🍽️",
+    "Un cinéma magnifique ✨",
+    "Notre première poutine 🌅",
+    "Notre premier resto en Italie pour l'anniversaire 🌸🍴",
+    "Nos baignades à la plage de Villefranche 🌊🥰",
+    "Nos sorties sur la corniche 🌄",
+    "L’anniversaire de ma star qui a fêté ses 18 ans 🎂✨",
+    "Ma femme avec ma fille ❤️👩‍👧",
+    "T’aimes bien la pose ? 😎",
+    "Nani qui a validé son baptême de plongée 🌊🤿",
+    "Eyes contact 👀✨",
+    "Vamos Portugal !!! 🇵🇹⚽",
+    "Mamma mia la Cucina Italiana 🍝🇮🇹",
+    "Le musée de Monaco 🏛️🇲🇨",
+    "Notre premier marché de Noël 🎄☃️",
+    "Couché de soleil sur la Prom 🌅",
+    "Burrito mexicano 🌯🇲🇽",
+    "Le premier resto tunisien “Trop piquant” ! 🌶️🇹🇳"
+];
+
       
         let currentPhoto = 1;
       
