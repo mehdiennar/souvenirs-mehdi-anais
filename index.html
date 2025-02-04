@@ -285,6 +285,20 @@
           }
         }
       </script>
-      
+
+        document.querySelectorAll(".scratch-overlay").forEach((overlay) => {
+  let scratched = false;
+
+  overlay.addEventListener("mousemove", (e) => {
+    if (e.buttons === 1 && !scratched) {
+      overlay.classList.add("scratched"); // Enlève l'overlay sur grattage
+      scratched = true;
+    }
+  });
+});
+
+
+
+        
   </body>
 </html>
