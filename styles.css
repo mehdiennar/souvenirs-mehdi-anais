@@ -161,3 +161,46 @@ footer {
     right: 50%;
     transform: translateX(50%);
 }
+
+#lock-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+#lock-screen input {
+    padding: 10px;
+    font-size: 18px;
+    margin: 10px 0;
+    border: 2px solid #ff4081;
+    border-radius: 5px;
+    width: 200px;
+}
+
+#lock-screen button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background: #ff4081;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#lock-screen button:hover {
+    background: #e91e63;
+}
+
+#error-message {
+    color: red;
+    margin-top: 10px;
+    display: none;
+}
