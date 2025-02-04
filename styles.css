@@ -205,18 +205,3 @@ footer {
     display: none;
 }
 
-.scratch-frame {
-    position: relative;
-    display: inline-block;
-}
-
-.scratch-overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #ccc;
-    cursor: crosshair;
-    z-index: 2;
-}
