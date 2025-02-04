@@ -26,9 +26,10 @@
     <div class="gallery">
       <div class="gallery">
         <div class="scratch-frame">
-  <img src="example1.jpg" alt="Souvenir 1" />
-  <div class="scratch-overlay" data-desc="Notre premier match ensemble 💕"></div>
-</div>
+        <img src="example1.jpg" alt="Souvenir 1" />
+        <div class="scratch-overlay" data-desc="Notre premier match ensemble 💕"></div>
+        </div>
+
 
         <div class="photo-frame" onclick="openFullscreen('example2.jpg', 'Petit pique-nique sur la prom\' 🌞')">
             <img src="example2.jpg" alt="Souvenir 2" />
@@ -287,17 +288,44 @@
         }
       </script>
 
-        document.querySelectorAll(".scratch-overlay").forEach((overlay) => {
-  let scratched = false;
+     <script>
+    document.querySelectorAll('.scratch-overlay').forEach(overlay => {
+        let scratched = false;
 
-  overlay.addEventListener("mousemove", (e) => {
-    if (e.buttons === 1 && !scratched) {
-      overlay.classList.add("scratched"); // Enlève l'overlay sur grattage
-      scratched = true;
-    }
-  });
-});
+        overlay.addEventListener('mousemove', (e) => {
+            if (e.buttons === 1 && !scratched) {
+                const rect = overlay.getBoundingClientRect();
+                const x = e.clientX - rect.left;
+                const y = e.clientY - rect.top;
+                const ctx = overlay.getContext('2d');
 
+                if (!ctx) {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = rect.width;
+                    canvas.height = rect.height;
+                    overlay.replaceWith(canvas);
+                    canvas.style.position = "absolute";
+                    canvas.style.top = "0";
+                    canvas.style.left = "0";
+                    canvas.style.zIndex = "2";
+                    const newCtx = canvas.getContext('2d');
+                    newCtx.fillStyle = "#ccc";
+                    newCtx.fillRect(0, 0, rect.width, rect.height);
+                    overlay = canvas;
+                }
+
+                ctx.clearRect(x - 10, y - 10, 20, 20);
+
+                // Vérifie si tout est gratté
+                if (Math.random() > 0.9) {
+                    scratched = true;
+                    overlay.parentElement.querySelector('.scratch-overlay').style.display = 'none';
+                    alert(overlay.getAttribute('data-desc'));
+                }
+            }
+        });
+    });
+</script>
 
 
         
