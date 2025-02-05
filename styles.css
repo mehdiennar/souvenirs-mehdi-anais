@@ -72,10 +72,10 @@ footer {
 
 #hearts-container {
     position: fixed;
-    top: 20px; /* Ajuste cette valeur selon tes besoins */
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 20px); /* Ajuste la hauteur si nécessaire */
+    height: 100%;
     overflow: hidden;
     z-index: -1; /* Place les cœurs derrière tout le reste */
 }
@@ -87,12 +87,12 @@ footer {
     font-size: 30px;
     animation: float 4s linear infinite;
     z-index: -1; /* Assure que les cœurs restent derrière */
-    top: calc(100vh - 200px); /* Position de départ plus basse */
 }
 
+
 @keyframes float {
-    0% { transform: translateY(0vh); opacity: 1; } /* Départ plus bas */
-    100% { transform: translateY(-100vh); opacity: 0; }
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
 }
 
 
