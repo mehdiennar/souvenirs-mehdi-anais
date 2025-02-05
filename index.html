@@ -226,24 +226,27 @@
       </script>
       
     <script>
-      function createHeart() {
-        const heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+  function createHeart() {
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px"; /* Taille aléatoire */
+    heart.style.animationDuration = Math.random() * 3 + 5 + "s"; /* Durée aléatoire */
 
-        // Ajoute les cœurs dans le conteneur
-        document.getElementById("hearts-container").appendChild(heart);
+    // Ajoute le cœur au conteneur
+    document.getElementById("hearts-container").appendChild(heart);
 
-        setTimeout(() => {
-          heart.remove();
-        }, 4000);
-      }
+    // Retire le cœur après l'animation
+    setTimeout(() => {
+      heart.remove();
+    }, 8000); // Doit être légèrement supérieur à la durée totale de l'animation
+  }
 
-      // Génère un cœur toutes les 300 ms
-      setInterval(createHeart, 300);
-    </script>
+  // Générer un cœur toutes les 300 ms
+  setInterval(createHeart, 300);
+</script>
+
     <div class="fullscreen" id="fullscreen">
       <button id="prev" onclick="prevPhoto()">◀</button>
       <div class="content">
