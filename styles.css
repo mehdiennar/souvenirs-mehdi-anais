@@ -76,23 +76,37 @@ footer {
     left: 0;
     width: 100%;
     height: 100%;
+    pointer-events: none; /* Empêche d'interagir avec les cœurs */
+    z-index: -1; /* Place les cœurs derrière le contenu */
     overflow: hidden;
-    z-index: -1; /* Place les cœurs derrière tout le reste */
 }
-
 
 .heart {
     position: absolute;
-    color: #ff4081;
-    font-size: 30px;
-    animation: float 4s linear infinite;
-    z-index: -1; /* Assure que les cœurs restent derrière */
+    color: #ff69b4; /* Couleur des cœurs */
+    font-size: 20px;
+    animation: float 5s ease-in-out infinite, drift 10s linear infinite;
+    opacity: 0.8; /* Transparence des cœurs */
 }
 
-
 @keyframes float {
-    0% { transform: translateY(100vh); opacity: 1; }
-    100% { transform: translateY(-10vh); opacity: 0; }
+    0% {
+        transform: translateY(100vh) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-10vh) scale(0.5);
+        opacity: 0;
+    }
+}
+
+@keyframes drift {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(20vw);
+    }
 }
 
 
