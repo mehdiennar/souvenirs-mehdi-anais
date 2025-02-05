@@ -5,17 +5,15 @@ body {
     text-align: center;
     font-family: 'Comic Sans MS', cursive, sans-serif;
     margin: 0;
+    overflow-y: auto; /* Permet le scroll */
 }
-
-
-
-
 
 @keyframes gradientBG {
     0% { background-position: 0% 50%; }
     50% { background-position: 100% 50%; }
     100% { background-position: 0% 50%; }
 }
+
 
 h1 {
     color: #ff4081;
