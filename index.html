@@ -22,11 +22,8 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
+
       <div id="hearts-container"></div>
-
-      
-
-      <div id="hearts-container">
       <script>
       document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
@@ -228,7 +225,21 @@
         }
       </script>
       
+    <script>
+      function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
 
+        // Ajoute les cœurs dans le conteneur
+        document.getElementById("hearts-container").appendChild(heart);
+
+        setTimeout(() => {
+          heart.remove();
+        }, 4000);
+      }
 
       // Génère un cœur toutes les 300 ms
       setInterval(createHeart, 300);
@@ -294,24 +305,6 @@
       </script>
 
      <script>
-        </div>
-  
-     <script>
-    function createHeart() {
-        const heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
-        document.getElementById("hearts-container").appendChild(heart);
-        setTimeout(() => {
-            heart.remove();
-        }, 4000);
-    }
-
-    // Génère un cœur toutes les 300 ms
-    setInterval(createHeart, 300);
-     </script>
-
-</body>
+        
+  </body>
 </html>
