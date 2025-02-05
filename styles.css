@@ -72,13 +72,14 @@ footer {
 
 #hearts-container {
     position: fixed;
-    top: 20px; /* Ajuste cette valeur selon tes besoins */
+    top: 0;
     left: 0;
     width: 100%;
-    height: calc(100% - 20px); /* Ajuste la hauteur si nécessaire */
+    height: 100%;
     overflow: hidden;
     z-index: -1; /* Place les cœurs derrière tout le reste */
 }
+
 
 
 .heart {
