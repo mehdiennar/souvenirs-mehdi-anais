@@ -22,6 +22,9 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
+      <div id="hearts-container"></div>
+
+      
 
       <div id="hearts-container">
       <script>
@@ -293,7 +296,7 @@
      <script>
         </div>
   
-            <script>
+     <script>
     function createHeart() {
         const heart = document.createElement("div");
         heart.classList.add("heart");
@@ -306,7 +309,9 @@
         }, 4000);
     }
 
+    // Génère un cœur toutes les 300 ms
     setInterval(createHeart, 300);
-</script>
+     </script>
+
 </body>
 </html>
