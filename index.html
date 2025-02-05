@@ -227,11 +227,22 @@
       
     <script>
       function createHeart() {
-        const heart = document.createElement("div");
-        heart.classList.add("heart");
-        heart.innerHTML = "❤️";
-        heart.style.left = Math.random() * 100 + "vw";
-        heart.style.animationDuration = Math.random() * 2 + 3 + "s";
+    const heart = document.createElement("div");
+    heart.classList.add("heart");
+    heart.innerHTML = "❤️";
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.bottom = "-50px"; // Départ du bas de l'écran
+    heart.style.animation = "float 4s linear infinite";
+    document.getElementById("hearts-container").appendChild(heart);
+
+    setTimeout(() => {
+        heart.remove();
+    }, 4000);
+}
+
+// Génère un cœur toutes les 300 ms
+setInterval(createHeart, 300);
+
 
         // Ajoute les cœurs dans le conteneur
         document.getElementById("hearts-container").appendChild(heart);
