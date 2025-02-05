@@ -10,12 +10,6 @@
     </div>
 </div>
 
-<div id="intermediate-screen" class="screen" onclick="hideIntermediateScreen()">
-  <div class="message-container">
-    <h2>Message spécial ici</h2>
-    <div id="animated-flowers"></div>
-  </div>
-</div>
 
 
   
@@ -25,8 +19,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Souvenirs de Mehdi & Anaïs</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
+      <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        Swal.fire({
+          title: "Un message pour toi 💖",
+          text: "Ton message ici",
+          imageUrl: "tulipes.gif", // Remplace par le bon chemin de l'image
+          imageWidth: 200,
+          imageHeight: 200,
+          confirmButtonText: "Continuer",
+          allowOutsideClick: true,
+        });
+      });
+    </script>
+      
     <div id="hearts-container"></div>
     <header>
       <h1>Joyeuse Saint-Valentin 💖</h1>
