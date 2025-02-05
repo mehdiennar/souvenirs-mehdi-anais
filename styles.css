@@ -215,7 +215,9 @@ footer {
     justify-content: center;
     align-items: center;
     z-index: 9998;
+    overflow-y: auto; /* Permet le scroll */
 }
+
 
 .message-container {
     text-align: center;
