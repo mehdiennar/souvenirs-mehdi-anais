@@ -231,21 +231,28 @@
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 20 + "px"; /* Taille aléatoire */
-    heart.style.animationDuration = Math.random() * 3 + 5 + "s"; /* Durée aléatoire */
 
-    // Ajoute le cœur au conteneur
+    // Position aléatoire en largeur
+    heart.style.left = Math.random() * 100 + "vw";
+    
+    // Taille aléatoire
+    heart.style.fontSize = Math.random() * 20 + 20 + "px";
+    
+    // Durée d'animation aléatoire
+    heart.style.animationDuration = Math.random() * 5 + 5 + "s";
+
+    // Ajouter le cœur au conteneur
     document.getElementById("hearts-container").appendChild(heart);
 
-    // Retire le cœur après l'animation
+    // Retirer le cœur après l'animation
     setTimeout(() => {
-      heart.remove();
-    }, 8000); // Doit être légèrement supérieur à la durée totale de l'animation
-  }
+        heart.remove();
+    }, 10000); // Légèrement plus long que l'animation
+}
 
-  // Générer un cœur toutes les 300 ms
-  setInterval(createHeart, 300);
+// Générer un cœur toutes les 300 ms
+setInterval(createHeart, 300);
+
 </script>
 
     <div class="fullscreen" id="fullscreen">
