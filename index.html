@@ -247,10 +247,16 @@ function createHeart() {
 
     document.getElementById("hearts-container").appendChild(heart);
 
+    // Forcer la montée en JS après un très court délai
+    setTimeout(() => {
+        heart.style.bottom = "100vh";
+    }, 10);
+
     setTimeout(() => {
         heart.remove();
     }, 10000); // Supprime le cœur après 10s
 }
+
 
   // Générer un cœur toutes les 300 ms
   setInterval(createHeart, 300);
