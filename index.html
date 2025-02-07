@@ -29,7 +29,16 @@
       document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
           title: "Un message pour toi 💖",
-          text: "À mon amour de ma vie ❤️, À ce jour je voulais te dire encore je t’aime, sachant que c’est juste une occasion pour se le dire une fois de plus , merci pour ta présence dans ma vie , depuis que t’es à mes côtés ma vie est illuminé ✨, Joyeuse Saint-Valentin chérie 💗.",
+          html: `
+        <p style="text-align: center; font-size: 18px; font-family: Arial, sans-serif; line-height: 1.8;">
+          <strong>À mon amour de ma vie ❤️,</strong><br><br>
+          À ce jour je voulais te dire encore je t’aime,<br>
+          sachant que c’est juste une occasion pour se le dire une fois de plus,<br>
+          merci pour ta présence dans ma vie,<br>
+          depuis que t’es à mes côtés ma vie est illuminée ✨,<br><br>
+          <strong>Joyeuse Saint-Valentin chérie 💗.</strong>
+        </p>
+      `,
           imageUrl: "tulipes.gif", // Remplace par le bon chemin de l'image
           imageWidth: 200,
           imageHeight: 200,
