@@ -28,16 +28,8 @@
       <script>
       document.addEventListener("DOMContentLoaded", function () {
         Swal.fire({
-          html: `
-        <p style="text-align: center; font-size: 18px; font-family: Arial, sans-serif; line-height: 1.8;">
-          <strong>À mon amour de ma vie ❤️,</strong><br><br>
-          À ce jour je voulais te dire encore je t’aime,<br>
-          sachant que c’est juste une occasion pour se le dire une fois de plus,<br>
-          merci pour ta présence dans ma vie,<br>
-          depuis que t’es à mes côtés ma vie est illuminée ✨,<br><br>
-          <strong>Joyeuse Saint-Valentin chérie 💗.</strong>
-        </p>
-      `,
+          title: "Un message pour toi 💖",
+          text: "Ton message ici",
           imageUrl: "tulipes.gif", // Remplace par le bon chemin de l'image
           imageWidth: 200,
           imageHeight: 200,
@@ -235,28 +227,22 @@
       </script>
       
     <script>
-function createHeart() {
+  function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
-    
-    heart.style.left = Math.random() * 100 + "vw"; // Position horizontale aléatoire
-    heart.style.bottom = "0px"; // Départ du bas
-    heart.style.fontSize = Math.random() * 20 + 20 + "px"; // Taille aléatoire
-    heart.style.animationDuration = Math.random() * 5 + 5 + "s"; // Durée aléatoire (5-10s)
+    heart.style.left = Math.random() * 100 + "vw";
+    heart.style.fontSize = Math.random() * 20 + 20 + "px"; /* Taille aléatoire */
+    heart.style.animationDuration = Math.random() * 3 + 5 + "s"; /* Durée aléatoire */
 
+    // Ajoute le cœur au conteneur
     document.getElementById("hearts-container").appendChild(heart);
 
-    // Forcer la montée en JS après un très court délai
+    // Retire le cœur après l'animation
     setTimeout(() => {
-        heart.style.bottom = "100vh";
-    }, 10);
-
-    setTimeout(() => {
-        heart.remove();
-    }, 10000); // Supprime le cœur après 10s
-}
-
+      heart.remove();
+    }, 8000); // Doit être légèrement supérieur à la durée totale de l'animation
+  }
 
   // Générer un cœur toutes les 300 ms
   setInterval(createHeart, 300);
