@@ -70,46 +70,29 @@ footer {
     100% { transform: rotate(2deg); }
 }
 
+
 #hearts-container {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Assure une couverture complète */
-    pointer-events: none;
+    height: 100%;
     overflow: hidden;
-    z-index: 9999;
+    z-index: -1; /* Place les cœurs derrière tout le reste */
 }
 
 .heart {
     position: absolute;
-    bottom: -10px; /* Fait apparaître les cœurs du bas de l'écran */
-    color: red;
-    font-size: 20px;
-    animation: float 5s linear infinite, drift 10s linear infinite;
+    color: #ff4081;
+    font-size: 30px;
+    animation: float 4s linear infinite;
+    z-index: -1; /* Assure que les cœurs restent derrière */
 }
+
 
 @keyframes float {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(-100vh); /* Fait monter les cœurs jusqu'en haut */
-        opacity: 0;
-    }
-}
-
-@keyframes drift {
-    0% {
-        transform: translateX(0);
-    }
-    50% {
-        transform: translateX(20px);
-    }
-    100% {
-        transform: translateX(-20px);
-    }
+    0% { transform: translateY(100vh); opacity: 1; }
+    100% { transform: translateY(-10vh); opacity: 0; }
 }
 
 
