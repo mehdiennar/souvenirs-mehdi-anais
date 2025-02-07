@@ -240,16 +240,16 @@ function createHeart() {
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
     
-    heart.style.left = Math.random() * 100 + "vw"; // Position horizontale aléatoire
+    heart.style.left = Math.random() * 100 + "vw"; // Position aléatoire en largeur
     heart.style.bottom = "0px"; // Départ du bas
     heart.style.fontSize = Math.random() * 20 + 20 + "px"; // Taille aléatoire
-    heart.style.animationDuration = Math.random() * 3 + 5 + "s"; // Durée aléatoire
+    heart.style.animationDuration = Math.random() * 5 + 5 + "s"; // Durée entre 5 et 10s
 
     document.getElementById("hearts-container").appendChild(heart);
 
     setTimeout(() => {
         heart.remove();
-    }, 8000);
+    }, 10000); // Supprime le cœur après 10s
 }
 
   // Générer un cœur toutes les 300 ms
