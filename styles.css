@@ -84,14 +84,14 @@ footer {
 .heart {
     position: absolute;
     bottom: 0; /* Départ du bas */
-    left: calc(50% - 10px); /* Position horizontale aléatoire */
+    left: 50%; /* Point de départ centré, ajusté en JS */
     color: #ff69b4; /* Couleur des cœurs */
     font-size: 20px;
-    animation: float 5s ease-in-out infinite, drift 10s linear infinite;
-    opacity: 0.8; /* Transparence des cœurs */
+    opacity: 0.8;
+    animation: floatUp 5s ease-in-out forwards, driftSide 3s ease-in-out infinite alternate;
 }
 
-@keyframes float {
+@keyframes floatUp {
     0% {
         transform: translateY(0);
         opacity: 1;
@@ -102,14 +102,15 @@ footer {
     }
 }
 
-@keyframes drift {
+@keyframes driftSide {
     0% {
-        transform: translateX(0);
+        transform: translateX(-10px);
     }
     100% {
-        transform: translateX(calc(20vw - 10px));
+        transform: translateX(10px);
     }
 }
+
 
 
 
