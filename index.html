@@ -235,22 +235,22 @@
       </script>
       
     <script>
-  function createHeart() {
+function createHeart() {
     const heart = document.createElement("div");
     heart.classList.add("heart");
     heart.innerHTML = "❤️";
-    heart.style.left = Math.random() * 100 + "vw";
-    heart.style.fontSize = Math.random() * 20 + 20 + "px"; /* Taille aléatoire */
-    heart.style.animationDuration = Math.random() * 3 + 5 + "s"; /* Durée aléatoire */
+    
+    heart.style.left = Math.random() * 100 + "vw"; // Position horizontale aléatoire
+    heart.style.bottom = "0px"; // Départ du bas
+    heart.style.fontSize = Math.random() * 20 + 20 + "px"; // Taille aléatoire
+    heart.style.animationDuration = Math.random() * 3 + 5 + "s"; // Durée aléatoire
 
-    // Ajoute le cœur au conteneur
     document.getElementById("hearts-container").appendChild(heart);
 
-    // Retire le cœur après l'animation
     setTimeout(() => {
-      heart.remove();
-    }, 8000); // Doit être légèrement supérieur à la durée totale de l'animation
-  }
+        heart.remove();
+    }, 8000);
+}
 
   // Générer un cœur toutes les 300 ms
   setInterval(createHeart, 300);
