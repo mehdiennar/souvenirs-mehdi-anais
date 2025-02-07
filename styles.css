@@ -75,27 +75,27 @@ footer {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100vh; /* Assure une couverture complète */
-    pointer-events: none;
+    height: 100%;
+    pointer-events: none; /* Empêche d'interagir avec les cœurs */
+    z-index: -1; /* Place les cœurs derrière le contenu */
     overflow: hidden;
-    z-index: 9999;
 }
 
 .heart {
     position: absolute;
-    bottom: -10px; /* Fait apparaître les cœurs du bas de l'écran */
-    color: red;
+    color: #ff69b4; /* Couleur des cœurs */
     font-size: 20px;
-    animation: float 5s linear infinite, drift 10s linear infinite;
+    animation: float 5s ease-in-out infinite, drift 10s linear infinite;
+    opacity: 0.8; /* Transparence des cœurs */
 }
 
 @keyframes float {
     0% {
-        transform: translateY(0);
+        transform: translateY(100vh) scale(1);
         opacity: 1;
     }
     100% {
-        transform: translateY(-100vh); /* Fait monter les cœurs jusqu'en haut */
+        transform: translateY(-10vh) scale(0.5);
         opacity: 0;
     }
 }
@@ -104,11 +104,8 @@ footer {
     0% {
         transform: translateX(0);
     }
-    50% {
-        transform: translateX(20px);
-    }
     100% {
-        transform: translateX(-20px);
+        transform: translateX(20vw);
     }
 }
 
